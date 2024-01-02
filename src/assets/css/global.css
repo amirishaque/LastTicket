@@ -337,7 +337,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .form__group input[type="date"]{
-    background:url('../images/calender.svg') no-repeat 23px 50%;
+    /* background:url('../images/calender.svg') no-repeat 23px 50%; */
     padding-left: 71px;
 }
 .form__group input[type="date"]:before {

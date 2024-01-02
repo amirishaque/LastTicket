@@ -56,7 +56,7 @@ const Header = ({pageTitle, details}) => {
                 </div>
                 <div className="site__container">
                     <div className="landing__header-content d__flex d__flex-h-between d__flex-v-center">
-                        <Link className="landing__header-logo">
+                        <Link className="landing__header-logo" to="/">
                             <img src={Logo} alt="#"  />
                         </Link>
                         <div className={`landing__header-menu`}>

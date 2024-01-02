@@ -2,7 +2,7 @@ import "./home.css";
 import { NavLink } from "react-router-dom";
 import { useState } from 'react';
 import { Swiper , SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper";
+import { Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import BannerImg from "../../assets/images/landing-banner.jpg"
