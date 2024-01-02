@@ -71,25 +71,11 @@ const Header = ({pageTitle, details}) => {
                                     <HashLink to="/contact">Contact</HashLink>
                                 </li>
                             </ul>
-                            <div className="mobile-header-cta">
-                                {
-                                    user ?
-                                    <NavLink to={`${!user?.isInstitute ? "/dashboard" : user?.isInstitute ? "/institute-dashboard" : "/signup"}`} className="cta__btn">
-                                        Get Started
-                                        {ctaBtnIcon()}
-                                    </NavLink>
-                                    :
-                                    <NavLink to="login" className="cta__btn">
-                                        Login
-                                        {ctaBtnIcon()}
-                                    </NavLink>
-                                }
-                            </div>
                         </div>
 
                         <div className="header__cta d__flex">
                             <Search />
-                            <NavLink to="login" className="cta__btn">Login{ctaBtnIcon()}</NavLink>
+                            <NavLink to="/login" className="cta__btn">Login{ctaBtnIcon()}</NavLink>
                         </div>
                         <button className={`humbuger ${nav==true ? "active" : ""}`}  onClick={() => showNav()} >
                             <span></span>
