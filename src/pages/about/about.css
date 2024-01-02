@@ -1,0 +1,40 @@
+.small__banner {
+    height: 20vw;
+    background: #745e7b;
+}
+.container{
+    max-width: 1200px;
+    padding:0 15px;
+    margin:0 auto;
+
+}
+.small__banner .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:100%;
+}
+.small__banner h1{
+    color:#fff;
+    font-size: 55px;
+}
+
+.container.about__text {
+    padding-top: 50px;
+    color: #000;
+}
+
+.container.about__text p {
+    font-size: 16px;
+    line-height: 23px;
+    margin: 0 0 30px;
+}
+
+.container.about__text p.info {
+    line-height: 37px;
+    font-weight: 500;
+}
+
+.container.about__text p.info a {
+    color: #000;
+}

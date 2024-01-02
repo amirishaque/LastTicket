@@ -1,0 +1,19 @@
+.search__form input[type="text"] {
+    width: 230px;
+    height: 44px;
+    border-radius: 4px;
+    border: none;
+    padding: 0 20px;
+    background: #61c3e3;
+    position: relative;
+    outline: none;
+}
+
+.search__form input[type="text"]::placeholder {
+    color: #fff;
+    opacity: 1; /* Firefox */
+  }
+  
+.search__form input[type="text"]::-ms-input-placeholder { /* Edge 12 -18 */
+    color: #fff;
+  }
