@@ -1,25 +1,21 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "../../pages/home/Home";
-import Login from "../../pages/login/Login"
-import About from "../../pages/about/About"
-import RestPassword from "../../pages/resetPassword/ResetPassword"
-import Signup from "../../pages/signup/Signup";
-import SuccessEmail from "../../pages/signup/verification-email/SuccessEmail";
+import Home from "../../pages/home/Index";
+import About from "../../pages/about/Index";
+import Login from "../../pages/login/Index";
+import Signup from "../../pages/signup/Index";
+import Contact from "../../pages/contact/Index";
 import AccessDenied from "../../pages/accessDenied/AccessDenied";
-import ForgetPassword from "../../pages/forgetPassword/ForgotPassword";
 
 
 const CreateRoutes = () => {
-    return(
+    return (
         <>
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/login" element={<Login />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
-                <Route path="/forget-password" element={<ForgetPassword />} />
-                <Route path="/reset-password" element={<RestPassword />} />
-                <Route path="/success-email" element={<SuccessEmail />} />
+                <Route path="/contact" element={<Contact />} />
 
                 <Route path="/access-denied" element={<AccessDenied />} />
                 <Route path="*" element={<><h1>404</h1></>} />

@@ -1,0 +1,143 @@
+.small-banner{
+    height:400px;
+    margin: 0 0 80px;
+    text-align: center;
+    background:url("../../assets/images/small-banner.png") no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.small-banner p{
+    margin: 0 0 40px;
+    line-height: 25px;
+    color:#fff;
+}
+.small-banner .container{
+    max-width: 1040px;
+}
+.small-banner .search-form{
+    width:100%;
+    max-width:600px;
+    margin:0 auto;
+}
+.small-banner h1 {
+    margin: 0 0 10px;
+    color: #fff;
+    font-size: 45px;
+    line-height: 50px;
+}
+
+
+
+
+.contact-cols .col:last-child {
+    background-color: rgb(34,179,191, .5);
+    width: 48%;
+    padding: 50px 50px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.15);  
+}
+
+.contact-cols .col label {
+    display: block;
+    font-weight: 600;
+    font-size: 15px;
+    margin: 0 0 10px;
+    color: #fff;
+}
+
+.contact-cols .col input, .contact-cols .col select, .contact-cols .col textarea {
+    height: 40px;
+    border-radius: 6px;
+    border: 1px solid #d8d8d8;
+    padding: 10px 15px;
+    width: 100%;
+    color:#000;
+    font-size:14px;
+}
+.contact-cols .col input::placeholder,
+.contact-cols .col textarea::placeholder {
+    color: #000;
+    opacity: 1;
+  }
+  
+.contact-cols .col input::-ms-input-placeholder,
+.contact-cols .col textarea::-ms-input-placeholder {
+    color: #000;
+  }
+.contact-cols .col .field-row {
+    margin: 0 0 20px;
+    width: 49%;
+}
+
+.contact-cols .col .message-row {
+    width: 100%;
+}
+
+.contact-cols .col textarea {
+    resize: none;
+    height: 150px;
+}
+.contact-form input[type="submit"] {
+    border-radius: 6px;
+    color: #fff !important;
+    padding: 13px 5px;
+    background: #22B3C1;
+    font-weight: 600;
+    display: block;
+    border: none;
+    width: 100%;
+    height: 50px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.contact-cols h2 {
+    text-align: center;
+    width: 100%;
+    font-size: 26px;
+    line-height: 30px;
+    margin: 0 0 50px;
+}
+.contact-cols h3 {
+    margin: 0 0 50px;
+}
+
+.widget {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 0 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+    padding: 30px 0px;
+    margin-bottom: 0px;
+}
+.widget a{
+    color:#000;
+}
+.contact-form-container {
+    margin: -150px 0 0;
+    display: flex;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.15);
+}
+
+.contact-cols .col:first-child {
+    padding: 50px 50px;
+}
+
+.widget:last-child {
+    border-bottom: 0px;
+}
+.contact-field-flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact-cols .col .submit-row {
+    width: 100%;
+    text-align: center;
+}
