@@ -22,6 +22,7 @@ body{
     margin:0 auto;
     display: flex;
     width:100%;
+    flex-wrap: wrap;
 }
 .flex {
     display: flex;
@@ -70,3 +71,6 @@ a{
     font-size: 15px;
     cursor: pointer;
 }
+.login-page #main,
+.about-page #main,
+.contact-page #main{margin-bottom: 50px;}
