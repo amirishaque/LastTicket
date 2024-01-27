@@ -5,9 +5,9 @@ const App = () => {
   return(
     <>
       <div id="wrapper">
-        <main id="main">
+        {/* <main id="main"> */}
           <CreateRoutes />
-        </main>
+        {/* </main> */}
       </div>
     </>
   )

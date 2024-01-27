@@ -70,6 +70,17 @@ const Home = () => {
                                     disableOnInteraction: false, // Set to false to keep autoplaying even when user interacts with the slider
                                   }}
                                 className="mySwiper"
+                                breakpoints={{
+                                    767: {
+                                        slidesPerView: 3,
+                                    },
+                                    480: {
+                                        slidesPerView: 2,
+                                    },
+                                    0: {
+                                        slidesPerView: 1,
+                                    },
+                                }}
                             >
 
                                 <SwiperSlide>

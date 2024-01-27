@@ -18,8 +18,9 @@ body{
     overflow-x: hidden;
 }
 .container{
-    max-width:1200px;
+    max-width:1230px;
     margin:0 auto;
+    padding:0 15px;
     display: flex;
     width:100%;
     flex-wrap: wrap;
@@ -74,3 +75,8 @@ a{
 .login-page #main,
 .about-page #main,
 .contact-page #main{margin-bottom: 50px;}
+
+
+
+
+/* media queries */

@@ -1,99 +1,22 @@
 import "./about.css";
 import Header from "../../components/core/header/Header";
 import Footer from "../../components/core/footer/Footer";
+import SmallBanner from "../../components/core/small-banner/Index";
 
 
 const About = () => {
     return(
         <>
-            <div className="about-page">
+            <div className="about-area">
                 <Header />
                 <main id="main">
-                    <div className="small-banner">
-                        <div className="container column-direction">
-                            <h1>Contact Us</h1>
-                            <p>Here is the last chance to be the member of world’s leading ticket marketplace for live events around the globe.</p>
-                            <form class="search-form">
-                                <input type="text" placeholder="Search For An Event" />
-                                <input type="submit" value="Search" />
-                            </form>
-                        </div>
-                    </div>
-                    <div className="contact-cols">
-                        <div className="container">
-                            <div className="contact-form-container">
-                                <div className="col">
-                                    <h3>Ask how we can help you:</h3>
-                                    <div className="widgets">
-                                        <div className="widget">
-                                            <strong>Call Us</strong>
-                                            <a href="tel:+12763293991">+1 276 329 3991</a>
-                                        </div>
-                                        <div className="widget">
-                                            <strong>Contact Us via Email</strong>
-                                            <div>
-                                                <span className="small-title">For Sales:</span> &nbsp;
-                                                <a href="mailto:sales@lastchanceticket.com">sales@lastchanceticket.com</a>
-                                            </div>
-                                            <div>
-                                                <span className="small-title">For Support:</span> &nbsp;
-                                                <a href="mailto:support@lastchanceticket.com">support@lastchanceticket.com</a>
-                                            </div>
-                                        </div>
-                                        <div className="widget">
-                                            <strong>Location</strong>
-                                            <address>30 N Gould St Ste R Sheridan, Wyoming 82801, United States</address>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col ml-auto">
-                                    <form className="contact-form">
-                                        <div className="field-row">
-                                            <label htmlFor="input1">First Name</label>
-                                            <input id="input1" type="text" placeholder="Enter your first name" />
-                                        </div>
-                                        <div className="field-row">
-                                            <label htmlFor="input2">Last Name</label>
-                                            <input id="input2" type="text" placeholder="Enter your last name" />
-                                        </div>
-                                        <div className="field-row">
-                                            <label htmlFor="input3">Email Address</label>
-                                            <input id="input3" type="text" placeholder="Enter your email" />
-                                        </div>
-                                        <div className="field-row">
-                                            <label htmlFor="input4">Country</label>
-                                            <select id="input4">
-                                                <option selected>Select Country</option>
-                                                <option>Afghanistan</option>
-                                                <option>Pakistan</option>
-                                                <option>USA</option>
-                                                <option>Iraq</option>
-                                                <option>Iran</option>
-                                            </select>
-                                        </div>
-                                        <div className="field-row">
-                                            <label htmlFor="input5">Phone Number</label>
-                                            <input id="input5" type="text" placeholder="Enter your phone number" />
-                                        </div>
-                                        <div className="field-row">
-                                            <label htmlFor="input6">Purpose</label>
-                                            <select id="input6">
-                                                <option selected>Please Select</option>
-                                                <option>Sales</option>
-                                                <option>Support</option>
-                                            </select>
-                                        </div>
-                                        <div className="field-row">
-                                            <label htmlFor="input7">Message</label>
-                                            <textarea placeholder="Enter your message"></textarea>
-                                        </div>
-                                        <div className="field-row">
-                                            <input type="submit" value="Contact Now" />
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
+                    <SmallBanner bannerHeading="About Us" bannerText="Here is the last chance to be the member of world’s leading ticket marketplace for live events around the globe." />
+                    <div className="container text-holder">
+                        <h1>What we do</h1>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
                     </div>
                 </main>
                 <Footer />

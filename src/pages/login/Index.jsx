@@ -2,6 +2,7 @@ import "./login.css";
 import Header from "../../components/core/header/Header";
 import Footer from "../../components/core/footer/Footer";
 import { Link } from "react-router-dom";
+import SmallBanner from "../../components/core/small-banner/Index";
 
 
 const Login = () => {
@@ -10,16 +11,7 @@ const Login = () => {
             <div className="login-page">
                 <Header />
                 <main id="main">
-                    <div className="small-banner">
-                        <div className="container column-direction">
-                            <h1>Contact Us</h1>
-                            <p>Here is the last chance to be the member of world’s leading ticket marketplace for live events around the globe.</p>
-                            <form class="search-form">
-                                <input type="text" placeholder="Search For An Event" />
-                                <input type="submit" value="Search" />
-                            </form>
-                        </div>
-                    </div>
+                    <SmallBanner bannerHeading="Login" bannerText="Here is the last chance to be the member of world’s leading ticket marketplace for live events around the globe." />
                     <div className="contact-cols login-cols">
                         <div className="container">
                             <div className="contact-form-container login-form-container">
