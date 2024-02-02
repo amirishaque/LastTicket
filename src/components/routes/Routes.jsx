@@ -4,6 +4,8 @@ import About from "../../pages/about/Index";
 import Login from "../../pages/login/Index";
 import Signup from "../../pages/signup/Index";
 import Contact from "../../pages/contact/Index";
+import RequestEvent from "../../pages/requestEvent/Index";
+import SellTickets from "../../pages/sellTickets/Index";
 import AccessDenied from "../../pages/accessDenied/AccessDenied";
 
 
@@ -16,6 +18,8 @@ const CreateRoutes = () => {
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/request-event" element={<RequestEvent />} />
+                <Route path="/sell-tickets" element={<SellTickets />} />
 
                 <Route path="/access-denied" element={<AccessDenied />} />
                 <Route path="*" element={<><h1>404</h1></>} />

@@ -1,0 +1,27 @@
+.box-list li {
+    border-bottom: 1px solid #22b3c1;
+    padding: 10px 0;
+}
+.boxes.add .box .ico-holder {
+    width: 60px;
+    height: 60px;
+    background: none;
+    font-size: 40px;
+}
+
+@media(max-width:999px){
+    .boxes.add .box {
+        width: 30%;
+        flex: auto;
+    }
+}
+@media(max-width:767px){
+    .boxes.add .box {
+        width: 48%;
+    }
+}
+@media(max-width:600px){
+    .boxes.add .box {
+        width: 100%;
+    }
+}
