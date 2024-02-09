@@ -51,6 +51,13 @@ textarea{
     padding:0;
     list-style: none;
 }
+.text-center{
+    text-align: center;
+}
+.fluid{width:100%;}
+.uppercase{
+    text-transform: uppercase;
+}
 a{
     text-decoration: none;
     transition: 0.5s all linear;

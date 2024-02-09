@@ -20,31 +20,31 @@ const SellTickets = () => {
                                     <div className="ico-holder">&#127941;</div>
                                     <strong>Sports Tickets</strong>
                                     <ul className="box-list">
-                                        <li><Link to="/">Formula 1</Link></li>
-                                        <li><Link to="/">Sports</Link></li>
-                                        <li><Link to="/">UFC</Link></li>
-                                        <li><Link to="/">PSL</Link></li>
+                                        <li><Link to="/sell-tickets/1/Formula 1">Formula 1</Link></li>
+                                        <li><Link to="/sell-tickets/1/Sports">Sports</Link></li>
+                                        <li><Link to="/sell-tickets/1/UFC">UFC</Link></li>
+                                        <li><Link to="/sell-tickets/1/PSL">PSL</Link></li>
                                     </ul>
                                 </div>
                                 <div className="box">
                                     <div className="ico-holder">&#127903;</div>
                                     <strong>Concerts Tickets</strong>
                                     <ul className="box-list">
-                                        <li><Link to="/">Concert</Link></li>
+                                        <li><Link to="/sell-tickets/1/Concert">Concert</Link></li>
                                     </ul>
                                 </div>
                                 <div className="box">
                                     <div className="ico-holder">&#127915;</div>
                                     <strong>Theatre Tickets</strong>
                                     <ul className="box-list">
-                                        <li><Link to="/">Theatre</Link></li>
+                                        <li><Link to="/sell-tickets/1/Theatre">Theatre</Link></li>
                                     </ul>
                                 </div>
                                 <div className="box">
                                     <div className="ico-holder">&#127881;</div>
                                     <strong>Festival Tickets</strong>
                                     <ul className="box-list">
-                                        <li><Link to="/">Coming Soon...</Link></li>
+                                        <li><Link to="/sell-tickets/1/Coming Soon">Coming Soon...</Link></li>
                                     </ul>
                                 </div>
                             </div>
