@@ -55,7 +55,7 @@ const Home = () => {
                                     <strong><Link to="/">Theater / Comedy Shows</Link></strong>
                                 </div>
                             </div>
-                            <div className="link-holder"><Link to="/all-events">View Events <img src={arrow} alt="->" /></Link></div>
+                            <div className="link-holder"><Link to="#">View Events <img src={arrow} alt="->" /></Link></div>
                         </div>
                     </section>
                     <section className="cols">
@@ -150,7 +150,7 @@ const Home = () => {
                                     </div>
                                 </SwiperSlide>
                             </Swiper>
-                            <div className="link-holder"><Link to="/all-events">View Events <img src={arrow} alt="->" /></Link></div>
+                            <div className="link-holder"><Link to="#">View Events <img src={arrow} alt="->" /></Link></div>
                         </div>
                         
                     </section>
@@ -224,7 +224,7 @@ const Home = () => {
                                     </div>
                                 </SwiperSlide>
                             </Swiper>
-                            <div className="link-holder"><Link to="/all-events">View Events <img src={arrow} alt="->" /></Link></div>
+                            <div className="link-holder"><Link to="#">View Events <img src={arrow} alt="->" /></Link></div>
                         </div>
                     </section>
                     <section class="news-section">
