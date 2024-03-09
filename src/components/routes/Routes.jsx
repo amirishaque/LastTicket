@@ -7,6 +7,8 @@ import Contact from "../../pages/contact/Index";
 import RequestEvent from "../../pages/requestEvent/Index";
 import SellTickets from "../../pages/sellTickets/Index";
 import TicketDetails from "../../pages/ticketDetails/Index";
+import TicketView from "../../pages/ticketView/Index";
+import Checkout from "../../pages/checkout/Index";
 import AccessDenied from "../../pages/accessDenied/AccessDenied";
 
 
@@ -21,8 +23,9 @@ const CreateRoutes = () => {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/request-event" element={<RequestEvent />} />
                 <Route path="/sell-tickets" element={<SellTickets />} />
-                {/* <Route path="/sell-tickets/:ticketId" element={<TicketDetails />} /> */}
                 <Route path="/sell-tickets/:ticketId/:ticketName" element={<TicketDetails />} />
+                <Route path="/ticket/:ticketId/view" element={<TicketView />} />
+                <Route path="/checkout" element={<Checkout />} />
 
                 <Route path="/access-denied" element={<AccessDenied />} />
                 <Route path="*" element={<><h1>404</h1></>} />
