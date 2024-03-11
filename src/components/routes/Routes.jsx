@@ -10,6 +10,7 @@ import TicketDetails from "../../pages/ticketDetails/Index";
 import TicketView from "../../pages/ticketView/Index";
 import Checkout from "../../pages/checkout/Index";
 import AccessDenied from "../../pages/accessDenied/AccessDenied";
+import OrderSummary from "../../pages/orderSummary/Index";
 
 
 const CreateRoutes = () => {
@@ -26,6 +27,7 @@ const CreateRoutes = () => {
                 <Route path="/sell-tickets/:ticketId/:ticketName" element={<TicketDetails />} />
                 <Route path="/ticket/:ticketId/view" element={<TicketView />} />
                 <Route path="/checkout" element={<Checkout />} />
+                <Route path="/order-summary" element={<OrderSummary />} />
 
                 <Route path="/access-denied" element={<AccessDenied />} />
                 <Route path="*" element={<><h1>404</h1></>} />
