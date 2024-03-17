@@ -1,10 +1,9 @@
 .banner {
-    height: 36vw;
     position: relative;
     background: #13100f;
 }
 
-.banner:after {
+/* .banner:after {
     width: 100%;
     height: 19vw;
     position: absolute;
@@ -13,7 +12,7 @@
     bottom: -120px;
     background: url('../../assets/images/banner-bubbles.png') no-repeat;
     background-size: 100% 100%;
-}
+} */
 
 .home-page {
     position: relative;
@@ -30,16 +29,29 @@
     background-size: 100% 100%;
     opacity: 0.01;
 }
-
-.banner {
-    position: relative;
+.filture_list ul li {
+    padding: 2PX 15PX;
+    font-weight: 600;
+    font-size: 16px;
+    color: #22B3C1;
+    cursor: pointer;
+    text-transform:uppercase;
+}
+.hv_events:hover img {
+    border: 5px solid #22B3C1;
+    border-radius: 14px;
 }
 
+.filture_list .filters-form select {
+    padding: 4px;
+    border-radius: 5px;
+    border-color: grey;
+}
 .banner .text {
     width: 100%;
     height: 100%;
-    padding-bottom: 10vw;
-    position: absolute;
+    /* padding-bottom: 10vw; */
+    /* position: absolute; */
     top: 0;
     left: 0;
     z-index: 1;
@@ -94,6 +106,7 @@
     padding: 0 20px;
     height: 50px;
     font-size: 14px;
+    border-radius: 25px;
 }
 
 .search-form {
@@ -103,9 +116,12 @@
     align-items: center;
     gap: 10px;
     padding: 7px 8px;
+    border-radius: 25px;
+    position: relative;
+    border-radius: 32px;
 }
 
-.search-form input[type="submit"] {
+.search-form [type="submit"] {
     border-radius: 6px;
     color: #fff !important;
     padding: 13px 5px;
@@ -113,10 +129,14 @@
     font-weight: 600;
     display: block;
     border: none;
-    width: 108px;
-    height: 50px;
+    width: 15%;
+    height: 70%;
     font-size: 15px;
     cursor: pointer;
+    border-radius: 25px;
+    position: absolute;
+    right: 1.7%;
+    line-height: 13px;
 }
 
 .top-cols {
@@ -124,34 +144,48 @@
 }
 
 .sec-heading {
-    width: fit-content;
-    color: #210C0A;
-    text-transform: capitalize;
-    font-size: 30px;
+    font-size: 32px;
     line-height: 1.5;
     position: relative;
-    margin: 0 0 40px;
+    padding: 20px 15px 35px;
     font-weight: 600;
+    text-align: center;
 }
-
+.topEvt .sec-heading:after {
+    right: 38%;
+}
 .sec-heading:after {
     width: 165px;
     height: 26px;
     position: absolute;
     content: '';
-    right: -10px;
-    bottom: -8px;
-    background: url('../../assets/images/heading-shape.png') no-repeat;
+    right: 28%;
+    bottom: 17px;
     background-size: 100% 100%;
     z-index: -1;
+    background: url('../../assets/images/heading-shape.png') no-repeat;
+    z-index: 2;
 }
-
+.topEvt .topEvtRow {
+    margin-bottom:-7%;
+}
+.featuredEvt .column {
+    margin-bottom: 35px;
+}
+.featuredEvt .location img {
+    margin: auto 0;
+}
 .cols .column img {
     display: block;
     border-radius: 12px;
     margin: 0 0 20px;
+    max-width: 100%;
 }
-
+.topEvt img {
+    width:100%;
+    border: 5px solid transparent;
+    transition: all 0.35s ease-in-out;
+}
 .cols .column strong a {
     color: #210C0A;
 }
@@ -169,7 +203,11 @@
 .cols .columns .column{
     width:calc(33.3% - 11px);
 }
-.cols img{max-width: 100%;}
+.cols img{
+    max-width: 100%;
+    border: 5px solid transparent;
+    transition: all 0.35s ease-in-out;
+}
 .link-holder {
     text-align: center;
     margin: 30px 0 0;
@@ -214,27 +252,32 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 14px;
 }
-
+.swiper-button-prev {
+    background-color: #13100f;
+}
 .slide-item h2 {
     font-weight: 600;
-    font-size: 21px;
+    font-size: 19px;
+    margin: 0;
 }
-
+.color_white {
+    color: #fff;
+}
+.bg_green {
+    background-color: #00b67a;
+}
+.newsletter {
+    padding: 35px 15px;
+}
 .news-section {
-    background-color: #f5f5f5;
-    width: 100%;
-    padding: 80px 0;
-    height: 472px;
-    margin-top: 160px;
+    background-color: #D9D9D9;
+    margin-top: 75px;
 }
 
 .news-area {
     display: flex;
-}
-
-.newsletter {
-    width: 592px;
 }
 
 .newsletter h3 {
@@ -248,7 +291,9 @@
 .newsletter h3 span {
     position: relative;
 }
-
+.payment_method img {
+    width: 50px;
+}
 .newsletter p {
     color: #210c0a;
     font-size: 16px;
@@ -261,37 +306,34 @@
 .newsletter input {
     width: 414px;
     height: 48px;
-    border-radius: 6px;
+    border-radius: 6px 0 0 6px;
     border: 1px solid rgba(33, 12, 10, 0.2);
     background: var(--White, #fff);
     padding-left: 16px;
-    margin-top: 24px;
+
 }
 
 .newsletter a,
 .newsletter input[type="submit"] {
     color: #fff;
-    text-align: center;
     font-size: 16px;
     font-weight: 700;
-    width: 140px;
+    width: 25%;
     height: 48px;
-    border-radius: 6px;
+    border-radius: 0 6px 6px 0;
     background: #ff5b49;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 24px;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
 }
 
 .news-img {
     position: relative;
-    top: -141px;
-    left: 16px;
-    width: 50%;
-    height: 452px;
+    top: -75px;
 }
-
+.news-section .column {
+    width: 50%;
+}
 .swiper-button-prev,
 .swiper-button-next{
     right: 65px;
@@ -325,9 +367,9 @@
     height: auto;
 }
 @media(max-width:1200px){
-    .banner .text{
+    /* .banner .text{
         padding-top:10vw;
-    }
+    } */
     .top-cols {
         padding: 176px 0 70px;
     }
@@ -335,7 +377,11 @@
     .sec-heading{margin:0;}
 }
 @media(max-width:999px){
-    .news-img{display: none;}
+    
+    .news-img{
+        /* display: none; */
+        top: 0;
+    }
     .newsletter,
     .newsletter p {
         width: 100%;
@@ -344,11 +390,19 @@
     .newsletter *{
         text-align: center;
     }
-    .newsletter a, .newsletter input[type="submit"]{
-        margin:30px auto 0;
-    }
 }
 @media(max-width:767px){
+    .filters-form {
+        width: 100% !important;
+    }
+    .topEvt .topEvtRow {
+        margin-bottom:"0";
+    }
+    .search-form [type="submit"] {
+        width: 20%;
+        right: 2.5%;
+        
+    }
     .search-form input[type="text"] {
         width: 100%;
         flex:1;
@@ -371,9 +425,7 @@
     .top-cols {
         padding: 96px 0 70px;
     }
-    .news-section {
-        margin-top: 20px;
-    }
+
     .sec-heading{font-size: 24px;}
     .banner h1 {
         margin: 0 0 20px;
@@ -387,7 +439,7 @@
         width: 100%;
         padding: 30px 0;
         height: auto;
-        margin-top: 30px;
+        margin-top: 0;
     }
     .cols.top-cols .columns .column{
         width: calc(50% - 11px);

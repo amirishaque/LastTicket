@@ -13,11 +13,14 @@
     display: block;
     margin-right: 60px;
 }
+#nav li a {
+    text-decoration: none;
+}
 #nav ul {
-    gap: 40px;
+    gap: 25px;
 }
 .right-btns {
-    gap: 20px;
+    gap: 10px;
 }
 .nav-opener{display: none;}
 .header-right {

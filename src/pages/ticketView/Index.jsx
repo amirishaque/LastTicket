@@ -1,4 +1,5 @@
 import "./ticketView.css";
+import React, { useState } from 'react';
 import Header from "../../components/core/header/Header";
 import Footer from "../../components/core/footer/Footer";
 import SmallBanner from "../../components/core/small-banner/Index";
@@ -7,8 +8,42 @@ import map from "../../assets/images/map.jpg";
 import ticket from "../../assets/images/ticketIcon.png";
 
 const TicketView = () => {
-    return(
+    const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+    const openPopup = () => {
+
+        setIsPopupOpen(true);
+    };
+
+    const closePopup = () => {
+        setIsPopupOpen(false);
+    };
+    return (
         <>
+            {isPopupOpen && (
+                <div className="popup ticket_booking_popup">
+                    <div className="text-right"> <span className="close ticket_popup_close" onClick={closePopup}>&times;</span></div>
+                    <div className="popup-content">
+
+                        <h4 className="border-bottom pb-2">Ticket Quantity</h4>
+                        <p className="fw-bold">Please confirm how much ticket you would like to purchase</p>
+                        <form className="filters-form">
+                            <p className="mb-1">Select number of tickets</p>
+                            <select>
+                                <option>Select Number of Tickets</option>
+                                <option>1 Tickets</option>
+                                <option>2 Tickets</option>
+                                <option>3 Tickets</option>
+                                <option>4 Tickets</option>
+                                <option>5 Tickets</option>
+                                <option>6 Tickets</option>
+                                <option>7 Tickets</option>
+                            </select>
+                            <button className="ticket_popup_btn">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            )}
             <div className="login-page">
                 <Header />
                 <main id="main">
@@ -71,7 +106,7 @@ const TicketView = () => {
                                 <header className="header">
                                     <h2>Categories:</h2>
                                     <div className="colors flex v-center">
-                                        <div className="color">
+                                        <div className="color ">
                                             <div className="dot"></div>
                                             <span>Golden Circle - GC</span>
                                         </div>
@@ -86,7 +121,7 @@ const TicketView = () => {
                                         <div className="map-holder">
                                             <img src={map} alt="#" />
                                             <div className="views">
-                                              100  
+                                                100
                                             </div>
                                         </div>
                                         <div className="widget">
@@ -103,110 +138,134 @@ const TicketView = () => {
                                         <div className="ticket">
                                             <div className="ticket-holder">
                                                 <img src={ticket} alt="#" />
+                                                <div class="circleTop d-md-block d-none" ></div>
+                                                <div class="circleBottom d-md-block d-none"></div>
+
                                             </div>
-                                            <div className="cols flex v-center">
-                                                <div className="column">
-                                                    <span>Category:</span>
-                                                    <strong>Golden Circle - GC</strong>
-                                                    <span>Section:</span>
-                                                    <strong>Golden Circle</strong>
+                                            <div className="ticketInfo d-md-flex justify-content-center w-100 ">
+                                                <div className="cols flex v-center">
+                                                    <div className="column text-left">
+                                                        <span>Category:</span>
+                                                        <strong>Golden Circle - GC</strong>
+                                                        <span>Section:</span>
+                                                        <strong>Golden Circle</strong>
+                                                    </div>
+                                                    <div className="column">
+                                                        <span>Tickets:</span>
+                                                        <strong>No of Tickets: 7</strong>
+                                                        <span>Restriction:</span>
+                                                        <strong>Age Limit 21+</strong>
+                                                    </div>
+                                                    <div className="column">
+                                                        <span>Ticket-Type:</span>
+                                                        <strong style={{ fontSize: "22px" }}>E-Ticket</strong>
+                                                    </div>
                                                 </div>
-                                                <div className="column">
-                                                    <span>Tickets:</span>
-                                                    <strong>No of Tickets: 7</strong>
-                                                    <span>Restriction:</span>
-                                                    <strong>Age Limit 21+</strong>
-                                                </div>
-                                                <div className="column">
-                                                    <span>Ticket-Type:</span>
-                                                    <strong>E-Ticket</strong>
+                                                <div className="price-holder">
+                                                    <h3>$310.00</h3>
+                                                    <button type="button" onClick={openPopup}>Select Ticket</button>
                                                 </div>
                                             </div>
-                                            <div className="price-holder">
-                                                <h3>$310.00</h3>
-                                                <button type="button">Select Ticket</button>
-                                            </div>
+
                                         </div>
                                         <div className="ticket">
                                             <div className="ticket-holder">
                                                 <img src={ticket} alt="#" />
+                                                <div class="circleTop d-md-block d-none" ></div>
+                                                <div class="circleBottom d-md-block d-none"></div>
+
                                             </div>
-                                            <div className="cols flex v-center">
-                                                <div className="column">
-                                                    <span>Category:</span>
-                                                    <strong>Golden Circle - GC</strong>
-                                                    <span>Section:</span>
-                                                    <strong>Golden Circle</strong>
+                                            <div className="ticketInfo d-md-flex justify-content-center w-100 ">
+                                                <div className="cols flex v-center">
+                                                    <div className="column text-left">
+                                                        <span>Category:</span>
+                                                        <strong>Golden Circle - GC</strong>
+                                                        <span>Section:</span>
+                                                        <strong>Golden Circle</strong>
+                                                    </div>
+                                                    <div className="column">
+                                                        <span>Tickets:</span>
+                                                        <strong>No of Tickets: 7</strong>
+                                                        <span>Restriction:</span>
+                                                        <strong>Age Limit 21+</strong>
+                                                    </div>
+                                                    <div className="column">
+                                                        <span>Ticket-Type:</span>
+                                                        <strong style={{ fontSize: "22px" }}>E-Ticket</strong>
+                                                    </div>
                                                 </div>
-                                                <div className="column">
-                                                    <span>Tickets:</span>
-                                                    <strong>No of Tickets: 7</strong>
-                                                    <span>Restriction:</span>
-                                                    <strong>Age Limit 21+</strong>
-                                                </div>
-                                                <div className="column">
-                                                    <span>Ticket-Type:</span>
-                                                    <strong>E-Ticket</strong>
+                                                <div className="price-holder">
+                                                    <h3>$310.00</h3>
+                                                    <button type="button" onClick={openPopup}>Select Ticket</button>
                                                 </div>
                                             </div>
-                                            <div className="price-holder">
-                                                <h3>$310.00</h3>
-                                                <button type="button">Select Ticket</button>
-                                            </div>
+
                                         </div>
-                                        <div className="ticket yellow">
+                                        <div className="ticket ">
                                             <div className="ticket-holder">
                                                 <img src={ticket} alt="#" />
+                                                <div class="circleTop d-md-block d-none" ></div>
+                                                <div class="circleBottom d-md-block d-none"></div>
+
                                             </div>
-                                            <div className="cols flex v-center">
-                                                <div className="column">
-                                                    <span>Category:</span>
-                                                    <strong>Golden Circle - GC</strong>
-                                                    <span>Section:</span>
-                                                    <strong>Golden Circle</strong>
+                                            <div className="ticketInfo d-md-flex justify-content-center w-100 ">
+                                                <div className="cols flex v-center">
+                                                    <div className="column text-left">
+                                                        <span>Category:</span>
+                                                        <strong>Golden Circle - GC</strong>
+                                                        <span>Section:</span>
+                                                        <strong>Golden Circle</strong>
+                                                    </div>
+                                                    <div className="column">
+                                                        <span>Tickets:</span>
+                                                        <strong>No of Tickets: 7</strong>
+                                                        <span>Restriction:</span>
+                                                        <strong>Age Limit 21+</strong>
+                                                    </div>
+                                                    <div className="column">
+                                                        <span>Ticket-Type:</span>
+                                                        <strong style={{ fontSize: "22px" }}>E-Ticket</strong>
+                                                    </div>
                                                 </div>
-                                                <div className="column">
-                                                    <span>Tickets:</span>
-                                                    <strong>No of Tickets: 7</strong>
-                                                    <span>Restriction:</span>
-                                                    <strong>Age Limit 21+</strong>
-                                                </div>
-                                                <div className="column">
-                                                    <span>Ticket-Type:</span>
-                                                    <strong>E-Ticket</strong>
+                                                <div className="price-holder">
+                                                    <h3>$310.00</h3>
+                                                    <button type="button" onClick={openPopup}>Select Ticket</button>
                                                 </div>
                                             </div>
-                                            <div className="price-holder">
-                                                <h3>$310.00</h3>
-                                                <button type="button">Select Ticket</button>
-                                            </div>
+
                                         </div>
-                                        <div className="ticket yellow">
+                                        <div className="ticket">
                                             <div className="ticket-holder">
                                                 <img src={ticket} alt="#" />
+                                                <div class="circleTop d-md-block d-none" ></div>
+                                                <div class="circleBottom d-md-block d-none"></div>
+
                                             </div>
-                                            <div className="cols flex v-center">
-                                                <div className="column">
-                                                    <span>Category:</span>
-                                                    <strong>Golden Circle - GC</strong>
-                                                    <span>Section:</span>
-                                                    <strong>Golden Circle</strong>
+                                            <div className="ticketInfo d-md-flex justify-content-center w-100 ">
+                                                <div className="cols flex v-center">
+                                                    <div className="column text-left">
+                                                        <span>Category:</span>
+                                                        <strong>Golden Circle - GC</strong>
+                                                        <span>Section:</span>
+                                                        <strong>Golden Circle</strong>
+                                                    </div>
+                                                    <div className="column">
+                                                        <span>Tickets:</span>
+                                                        <strong>No of Tickets: 7</strong>
+                                                        <span>Restriction:</span>
+                                                        <strong>Age Limit 21+</strong>
+                                                    </div>
+                                                    <div className="column">
+                                                        <span>Ticket-Type:</span>
+                                                        <strong style={{ fontSize: "22px" }}>E-Ticket</strong>
+                                                    </div>
                                                 </div>
-                                                <div className="column">
-                                                    <span>Tickets:</span>
-                                                    <strong>No of Tickets: 7</strong>
-                                                    <span>Restriction:</span>
-                                                    <strong>Age Limit 21+</strong>
-                                                </div>
-                                                <div className="column">
-                                                    <span>Ticket-Type:</span>
-                                                    <strong>E-Ticket</strong>
+                                                <div className="price-holder">
+                                                    <h3>$310.00</h3>
+                                                    <button type="button" onClick={openPopup}>Select Ticket</button>
                                                 </div>
                                             </div>
-                                            <div className="price-holder">
-                                                <h3>$310.00</h3>
-                                                <button type="button">Select Ticket</button>
-                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
