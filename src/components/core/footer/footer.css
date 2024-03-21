@@ -1,128 +1,93 @@
-#footer{
-    background: #13100F;
-    width: 100%;
-    padding-top: 35px;
-  }
-  
-  .information{
-    display: flex;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    padding-bottom: 60px;
-    gap: 107px;
-  }
-  
-  .info{
-    display: flex;
-    gap: 16px;
-  }
-  
-  .info-img{
-    width: 60px;
-    height: 60px;
-    border: 1px solid #FF5B49;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .info-content span{
-    color: var(--White, #FFF);
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 1.92px;
-    text-transform: uppercase;
-    opacity: 0.7;
-    margin-bottom: 10px;
-  }
-  
-  .info-content p{
-    color: var(--White, #FFF);
-    font-size: 20px;
-    font-weight: 400;
-  }
-  
-  .footer-nav{
-    width:100%;
-  padding: 65px 0;
+h1, h2, p {
+  margin: 0px;
+}
+
+.footer-wrapper {
+  padding: 75px 0px 39px 0px;
+  background-color: #121212;
+}
+.footer-wrapper .footer-wrapper-inner {
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid #54595F;
+  padding-bottom: 20px;
+  margin-bottom: 50px;
+}
+.footer-wrapper .footer-wrapper-inner .about {
+  max-width: 528px;
+  width: 100%;
+  padding-right: 90px;
+}
+.footer-wrapper .footer-wrapper-inner .about p {
+  color: #BABABA;
+  font-size: 18px;
+  padding-bottom: 15px;
+}
+.footer-wrapper .footer-wrapper-inner .about p span {
+  font-size: 24px;
+  font-weight: 500;
+}
+.footer-wrapper .footer-wrapper-inner .about ul {
+  display: flex;
   align-items: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  }
-  
-  .foot-logo {
-    width: 232px;
-  }
-  
-  .foot-logo a img {
-    width: 232px;
-    height: 100%;
-  }
-  
-  .copy{
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-  
-  .copy p, .copy span{
-    color: var(--White, #FFF);
-    font-size: 12px;
-    font-weight: 400;
-    letter-spacing: 1.2px;
-    text-transform: uppercase;
-    opacity: 0.7;
-  }
-  .copy span{margin-left: auto;}
-  
-  .copy span a{
-    color: var(--White, #FFF);
-    font-size: 12px;
-    font-weight: 400;
-    letter-spacing: 1.2px;
-    text-transform: uppercase;
-    opacity: 0.7;
-  }
-  #navbar ul {
-    display: flex;
-    align-items: center;
-    gap: 42px;
+  gap: 15px;
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
 }
-#navbar ul li a {
-    color: #fff;
-    font-size: 16px;
+.footer-wrapper .footer-wrapper-inner .detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  flex-direction: column;
+  max-width: 264px;
+  width: 100%;
 }
-
-@media(max-width:999px){
-  #navbar ul {
-    gap: 30px;
-  }
-  .footer-nav {
-    flex-direction: column;
-    padding: 30px 0;
-  }
-  #footer #navbar ul {
-    flex-direction: column;
-    gap: 17px;
-    margin: 20px 0 0;
-  }
-  .copy span {
-    margin: 0;
+.footer-wrapper .footer-wrapper-inner .detail h2 {
+  font-size: 18px;
+  color: #FFFFFF;
 }
-
-.copy {
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
+.footer-wrapper .footer-wrapper-inner .detail h2::after {
+  content: "";
+  display: block;
+  width: 78%;
+  height: 1px;
+  background-color: #0DCCD7;
+  margin-top: 15px;
 }
-.information{
-  gap:30px;
-  flex-wrap: wrap;
+.footer-wrapper .footer-wrapper-inner .detail ul {
+  padding: 0px;
+  margin: 0px;
 }
+.footer-wrapper .footer-wrapper-inner .detail ul li {
+  font-size: 18px;
+  color: #BABABA;
+  transition: 0.4s;
+  padding: 4px 0px 4px 0px;
+  cursor: pointer;
 }
-@media(max-width:767px){
-  #footer .info-content p {
-    word-break: break-word;
+.footer-wrapper .footer-wrapper-inner .detail ul li:hover {
+  color: #22b3c1;
 }
+.footer-wrapper .footer-bottom {
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+.footer-wrapper .footer-bottom .detail-footer span {
+  color: #BABABA;
+}
+.footer-wrapper .footer-bottom .social-links ul {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}/*# sourceMappingURL=footer.css.map */

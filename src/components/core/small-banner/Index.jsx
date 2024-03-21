@@ -8,10 +8,10 @@ const SmallBanner = ({bannerHeading, bannerText}) => {
                 <div className="container column-direction">
                     <h1>{bannerHeading}</h1>
                     <p>{bannerText}</p>
-                    <form class="search-form">
+                    {/* <form class="search-form">
                         <input type="text" placeholder="Search For An Event" />
                         <input type="submit" value="Search" />
-                    </form>
+                    </form> */}
                 </div>
             </div>
         </>
