@@ -21,7 +21,7 @@
 .home-page:after {
     width: 100%;
     height: 440px;
-    position: absolute;
+    /* position: absolute; */
     content: '';
     left: 0;
     top: 0;

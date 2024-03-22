@@ -1,36 +1,52 @@
 #header {
-    border-bottom: 1px solid rgba(255,255,255,0.5);
-    background: #13100f;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     padding: 20px 0;
-    position: relative;
-    z-index: 1;
+    background: #121212;
+
 }
-#nav a{
-    color:#fff;
-    font-weight:300;
+
+#nav a {
+    color: #fff;
+    font-weight: 300;
 }
+
 .logo {
     display: block;
     margin-right: 60px;
 }
+
 #nav li a {
     text-decoration: none;
+    font-size: 13px;
+    padding: 10px 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+#nav li a:hover{
+    color: #22B3C1;
+    transition: 0.4s;
 }
 #nav ul {
     gap: 25px;
 }
+
 .right-btns {
     gap: 10px;
 }
-.nav-opener{display: none;}
+
+.nav-opener {
+    display: none;
+}
+
 .header-right {
     flex: 1;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
 }
-@media(max-width:999px){
-    .nav-opener{
+
+@media(max-width:999px) {
+    .nav-opener {
         position: absolute;
         color: #fff;
         border: none;
@@ -42,18 +58,21 @@
         background: none;
         display: block;
     }
-    .nav-opener span{
-        width:100%;
-        margin:10px 0;
+
+    .nav-opener span {
+        width: 100%;
+        margin: 10px 0;
         display: block;
-        border-bottom:1px solid #fff;
+        border-bottom: 1px solid #fff;
         transition: all 0.2s ease;
         -webkit-transition: all 0.2s ease;
         -moz-transition: all 0.2s ease;
     }
-    .nav-opener span:nth-child(2){
-        width:80%;
+
+    .nav-opener span:nth-child(2) {
+        width: 80%;
     }
+
     .header-right {
         display: block;
         position: fixed;
@@ -71,15 +90,18 @@
         -webkit-transform: translate(-100%, 0);
         -moz-transform: translate(-100%, 0);
     }
+
     .header-right.active {
         transform: translate(0, 0);
         -webkit-transform: translate(0, 0);
         -moz-transform: translate(0, 0);
     }
+
     .header-right #nav ul {
         flex-direction: column;
         gap: 27px;
     }
+
     .right-btns {
         position: absolute;
         bottom: 140px;
@@ -87,6 +109,23 @@
         text-align: center;
         justify-content: center;
     }
-    .nav-opener.active span{width:80%;}
-    .nav-opener.active span:nth-child(2){width:100%;}
+
+    .nav-opener.active span {
+        width: 80%;
+    }
+
+    .nav-opener.active span:nth-child(2) {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+/* Common css */
+.login-btn{
+    border-radius: 40px;
+    font-size: 14px;
 }
