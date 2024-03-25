@@ -21,6 +21,7 @@ import "./banner.css";
 import "./top-events.css";
 import './home.css';
 import React, { useState, useEffect } from 'react';
+import Slider from '../../components/slider/slider';
 
 SwiperCore.use([Navigation]);
 
@@ -84,10 +85,7 @@ const Home = () => {
 					<section className='header-banner-wrapper'>
 						<Header />
 						<section className="banner-wrapper">
-
-							<marquee className='scroll-marquee' behavior="scroll" direction="left" style={{ color: '#fff' }}>
-								Hurray! You are in the right place * 100K+ social media followers * We value every custome
-							</marquee>
+							<Slider/>
 							<div className='banner-wrapper-inner'>
 								<h2>WELCOME TO Score Tickets</h2>
 								<h1>Unlock Adventures, Seize Moments, Live Dreams</h1>

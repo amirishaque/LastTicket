@@ -350,6 +350,7 @@
     right:0;
     background: url('../../assets/images/right-arrow.png') no-repeat;
     background-size: 100% 100%;
+    
 }
 .swiper, .swiper-container {
     margin-left: auto;

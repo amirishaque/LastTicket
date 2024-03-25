@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Header from "../../components/core/header/Header";
 import Footer from "../../components/core/footer/Footer";
 import SmallBanner from "../../components/core/small-banner/Index";
+import Slider from "../../components/slider/slider";
 
 
 const TicketDetails = () => {
@@ -15,12 +16,13 @@ const TicketDetails = () => {
             <div className="about-area">
                 <Header />
                 <main id="main">
+                    <Slider />
                     <SmallBanner
                         bannerHeading="SELL YOUR TICKETS ON LAST CHANCE TICKET"
                         bannerText="Last chance ticket helps you to sell the tickets quickly by making your listing available to millions of customers around the world."
                     />
                     <div className="container text-holder">
-                        <h1 className="text-center fluid uppercase">What we do {ticketName}</h1>
+                        <h1 className="text-center fluid uppercase">What we do <span>{ticketName}</span></h1>
                         <Swiper
                                 navigation
                                 pagination={false}
