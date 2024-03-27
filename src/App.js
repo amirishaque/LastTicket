@@ -10,7 +10,7 @@ const App = () => {
     // Simulate fetching data with a timeout
     setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, 3000);
   }, []);
 
   if (loading) {

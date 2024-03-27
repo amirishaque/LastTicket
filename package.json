@@ -4,6 +4,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.15.14",
     "@reduxjs/toolkit": "^1.9.3",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -17,6 +20,7 @@
     "react-bootstrap": "^2.10.1",
     "react-data-table-component": "^7.5.3",
     "react-dom": "^18.2.0",
+    "react-loader-spinner": "^6.1.6",
     "react-router": "^6.8.1",
     "react-router-dom": "^6.8.1",
     "react-router-hash-link": "^2.4.3",

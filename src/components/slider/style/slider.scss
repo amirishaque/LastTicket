@@ -1,6 +1,18 @@
-marquee{
-    background: #22B3C1;
-    color: white;
-    font-size: 16px;
-    padding: 3px 0px 3px 0px;
-}
+/* MouseControlledMarquee.css */
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    background-color: #0DCCD7;
+    height: 20px;
+  }
+  
+  .marquee-content {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: transform 0.5s ease-in-out;
+    color: #fff;
+  }
+  

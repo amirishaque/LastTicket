@@ -1,20 +1,36 @@
-import SwiperCore, { Navigation } from 'swiper';
-import Header from "../../components/core/header/Header";
-import Footer from "../../components/core/footer/Footer";
-import image1 from "../../assets/images/img1.png";
-import image2 from "../../assets/images/img2.png";
-import image3 from "../../assets/images/img3.png";
-import React, { useState, useEffect } from 'react';
-import './style/slider.css'
+import './style/slider.css';
 
-const Slider = () => {
-	return (
-		<>
-			<marquee className='scroll-marquee' behavior="scroll" direction="left">
-				Hurray! You are in the right place * 100K+ social media followers * We value every custome
-			</marquee>
-		</>
-	)
-}
+import React, { useState } from 'react';
 
-export default Slider
+const MouseControlledMarquee = ({ text }) => {
+  const [isHovering, setIsHovering] = useState(false);
+  const [position, setPosition] = useState(0);
+
+  const handleMouseMove = (e) => {
+    if (!isHovering) {
+      const containerWidth = e.currentTarget.offsetWidth;
+      const mousePosition = e.nativeEvent.offsetX;
+      const newPosition = (mousePosition / containerWidth) * 100;
+      setPosition(newPosition);
+    }
+  };
+
+  return (
+    <div
+      className="marquee-container"
+      onMouseMove={handleMouseMove}
+      onMouseEnter={() => setIsHovering(true)}
+      onMouseLeave={() => setIsHovering(false)}
+    >
+      <div
+        className="marquee-content"
+        style={{ transform: `translateX(${position - 50}%)` }}
+      >
+        {text}
+      </div>
+    </div>
+  );
+};
+
+export default MouseControlledMarquee;
+

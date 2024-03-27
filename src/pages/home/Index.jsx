@@ -10,8 +10,6 @@ import image5 from "../../assets/images/img5.png";
 import image6 from "../../assets/images/img6.png";
 import locationIcon from "../../assets/images/location-icon.png";
 import promoImage from "../../assets/images/promo-image.svg";
-import image7 from "../../assets/images/img7.png";
-import image8 from "../../assets/images/img8.png";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
@@ -23,12 +21,22 @@ import './home.css';
 import React, { useState, useEffect } from 'react';
 import Slider from '../../components/slider/slider';
 
+import Box from '@mui/material/Box';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+
+// for select
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+
 SwiperCore.use([Navigation]);
 
 const Home = () => {
 	const [placeholderText, setPlaceholderText] = useState('');
-	// Update this line with the new text
-	const text = 'Search here';
+	// Updated text with an additional letter
+	const text = 'Seearch here';
 	let index = 0;
 	let typing = true;
 
@@ -38,27 +46,94 @@ const Home = () => {
 				if (index < text.length) {
 					setPlaceholderText((prev) => prev + text.charAt(index));
 					index++;
-					setTimeout(animatePlaceholder, 200); // Adjust typing speed
+					setTimeout(animatePlaceholder, 200);
 				} else {
-					setTimeout(animatePlaceholder, 1000); // Pause before deleting
+					setTimeout(animatePlaceholder, 1000);
 					typing = false;
 				}
 			} else {
 				if (index > 0) {
 					setPlaceholderText((prev) => prev.substring(0, prev.length - 1));
 					index--;
-					setTimeout(animatePlaceholder, 100); // Adjust deleting speed
+					setTimeout(animatePlaceholder, 100);
 				} else {
-					setTimeout(animatePlaceholder, 1000); // Pause before typing again
+					setTimeout(animatePlaceholder, 1000);
 					typing = true;
 				}
 			}
 		}
 
 		animatePlaceholder();
-		// Cleanup function to clear the timeout if the component unmounts
 		return () => clearTimeout(animatePlaceholder);
 	}, []);
+
+
+	const [value, setValue] = React.useState(0);
+
+	const handleChange = (event, newValue) => {
+		setValue(newValue);
+	};
+
+	//For Select 
+	const [age, setAge] = React.useState('');
+
+	const handleChangeSelect = (event) => {
+		setAge(event.target.value);
+	};
+
+
+	//For Events
+	const events = [
+		{
+			id: 1,
+			image: "path/to/image1.jpg",
+			name: "Billy Joel & Stevie Nicks",
+			location: "New York, United States",
+			price: "From $80",
+			locationIcon: "path/to/locationIcon.png"
+		},
+		{
+			id: 2,
+			image: "path/to/image2.jpg",
+			name: "Billy Joel & Stevie Nicks",
+			location: "New York, United States",
+			price: "From $80",
+			locationIcon: "path/to/locationIcon.png"
+		},
+		{
+			id: 3,
+			image: "path/to/image2.jpg",
+			name: "Billy Joel & Stevie Nicks",
+			location: "New York, United States",
+			price: "From $80",
+			locationIcon: "path/to/locationIcon.png"
+		},
+		{
+			id: 4,
+			image: "path/to/image2.jpg",
+			name: "Billy Joel & Stevie Nicks",
+			location: "New York, United States",
+			price: "From $80",
+			locationIcon: "path/to/locationIcon.png"
+		},
+		{
+			id: 5,
+			image: "path/to/image2.jpg",
+			name: "Billy Joel & Stevie Nicks",
+			location: "New York, United States",
+			price: "From $80",
+			locationIcon: "path/to/locationIcon.png"
+		},
+		{
+			id: 6,
+			image: "path/to/image2.jpg",
+			name: "Billy Joel & Stevie Nicks",
+			location: "New York, United States",
+			price: "From $80",
+			locationIcon: "path/to/locationIcon.png"
+		}
+		// Add more events as needed
+	];
 
 
 	return (
@@ -85,13 +160,14 @@ const Home = () => {
 					<section className='header-banner-wrapper'>
 						<Header />
 						<section className="banner-wrapper">
-							<Slider/>
+							<Slider />
 							<div className='banner-wrapper-inner'>
 								<h2>WELCOME TO Score Tickets</h2>
 								<h1>Unlock Adventures, Seize Moments, Live Dreams</h1>
 								<p>Your unforgettable night awaits. We've got the tickets for your next amazing experience.</p>
 								<form>
-									<input type='text' placeholder={placeholderText} />
+									{/* <input type='text' placeholder='{placeholderText}' /> */}
+									<input type='text' placeholder='Search here' />
 									<button type='submit'>
 										<svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z" stroke="#0d6efd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -101,25 +177,6 @@ const Home = () => {
 							</div>
 						</section>
 					</section>
-					{/* <section className="cols topEvt" style={{ background: "#13100f" }}>
-						<div className=" flex column-direction">
-							<h2 className="sec-heading color_white" >Top Events</h2>
-							<div className="row mx-0 w-100 topEvtRow ">
-								<div className="col-md-3 col-12 mb-3 hv_events">
-									<Link to="/ticket/1/view"><img src={image2} alt="#" /></Link>
-								</div>
-								<div className="col-md-3 col-12 mb-3 hv_events">
-									<Link to="/ticket/1/view"><img src={image3} alt="#" /></Link>
-								</div>
-								<div className="col-md-3 col-12  mb-3 hv_events">
-									<Link to="/ticket/1/view"><img src={image1} alt="#" /></Link>
-								</div>
-								<div className="col-md-3 col-12  mb-3 hv_events">
-									<Link to="/ticket/1/view"><img src={image1} alt="#" /></Link>
-								</div>
-							</div>
-						</div>
-					</section> */}
 					<section className='top-events-wrapper'>
 						<h2>Top Events</h2>
 						<div className='image-wrapper'>
@@ -151,146 +208,80 @@ const Home = () => {
 									</figure>
 								</Link>
 							</div>
-						
+
 						</div>
 						<div className='white-overlay'></div>
 					</section>
-					<section className="cols featuredEvt" style={{ marginTop: "120px" }}>
-						<div className="container flex column-direction">
-							<h2 className="sec-heading">Featured Events On Sale Today</h2>
-							<div className="d-md-flex justify-content-between filture_list p-3">
-								<div className="d-md-flex">
-									<span className="fw-bold">Filtured By:</span>
-									<ul className="d-flex">
-										<li>All</li>
-										<li>Sports</li>
-										<li>Concerts</li>
-										<li>Festivals</li>
-										<li>Theaters</li>
-									</ul>
+					<section className="feature-events-wrapper">
+						<div className="feature-events-wrapper-inner">
+							<h2>Featured Events On Sale Today</h2>
+							<div className="filter-wrapper">
+								<div className="filter-left-fragment">
+									<strong>Filtered By: </strong>
+									<div className='filter-tabs-wrapper'>
+										<Box sx={{ width: '100%', bgcolor: 'background.paper' }}>
+											<Tabs value={value} onChange={handleChange} centered variant="scrollable"
+												scrollButtons="auto"
+												aria-label="scrollable auto tabs example">
+												<Tab label="All" sx={{ padding: 0 }} />
+												<Tab label="Sports" />
+												<Tab label="Concerts" />
+												<Tab label="Festivals" />
+												<Tab label="Theaters" />
+											</Tabs>
+										</Box>
+									</div>
 								</div>
-								<form className="filters-form " style={{ width: "25%" }}>
-									<select className="w-100">
-										<option>Fill By Ticket Type</option>
-										<option>All Tickets</option>
-										<option>Paper Ticket</option>
-										<option>E-Ticket</option>
-										<option>Mobile Ticket</option>
-									</select>
-								</form>
+								<div className='filter-right-fragment'>
+									<Box sx={{ minWidth: 360 }}>
+										<FormControl fullWidth>
+											<InputLabel id="demo-simple-select-label">Ticket Type</InputLabel>
+											<Select
+												labelId="demo-simple-select-label"
+												id="demo-simple-select"
+												value={age}
+												label="Ticket Type"
+												onChange={handleChangeSelect}
+											>
+												<MenuItem value={10}>All Tickets</MenuItem>
+												<MenuItem value={20}>Paper Ticket</MenuItem>
+												<MenuItem value={30}>E-Ticket</MenuItem>
+												<MenuItem value={30}>Mobile Ticket</MenuItem>
+											</Select>
+										</FormControl>
+									</Box>
+								</div>
+
 							</div>
-							<div className=" row flex">
-								<div className="col-md-4 col-12 mb-4 hv_events">
-									<div className="slide-item">
-										<img src={image4} alt="img" />
-										<h2>Billy Joel & Stevie Nicks</h2>
-										<span className="location">
-											<img src={locationIcon} alt="#" />
-											New York, United States
-										</span>
-										<strong className="price">From $80</strong>
-									</div>
-								</div>
-								<div className="col-md-4 col-12 mb-4 hv_events">
-									<div className="slide-item">
-										<img src={image5} alt="img" />
-										<h2>Billy Joel & Stevie Nicks</h2>
-										<span className="location">
-											<img src={locationIcon} alt="#" />
-											New York, United States
-										</span>
-										<strong className="price">From $80</strong>
-									</div>
-								</div>
-								<div className="col-md-4 col-12 mb-4 hv_events">
-									<div className="slide-item">
-										<img src={image6} alt="img" />
-										<h2>Billy Joel & Stevie Nicks</h2>
-										<span className="location">
-											<img src={locationIcon} alt="#" />
-											New York, United States
-										</span>
-										<strong className="price">From $80</strong>
-									</div>
-								</div>
-							</div>
-							<div className=" row flex">
-								<div className="col-md-4 col-12 mb-4 hv_events">
-									<div className="slide-item">
-										<img src={image4} alt="img" />
-										<h2>Billy Joel & Stevie Nicks</h2>
-										<span className="location">
-											<img src={locationIcon} alt="#" />
-											New York, United States
-										</span>
-										<strong className="price">From $80</strong>
-									</div>
-								</div>
-								<div className="col-md-4 col-12 mb-4 hv_events">
-									<div className="slide-item">
-										<img src={image5} alt="img" />
-										<h2>Billy Joel & Stevie Nicks</h2>
-										<span className="location">
-											<img src={locationIcon} alt="#" />
-											New York, United States
-										</span>
-										<strong className="price">From $80</strong>
-									</div>
-								</div>
-								<div className="col-md-4 col-12 mb-4 hv_events">
-									<div className="slide-item">
-										<img src={image6} alt="img" />
-										<h2>Billy Joel & Stevie Nicks</h2>
-										<span className="location">
-											<img src={locationIcon} alt="#" />
-											New York, United States
-										</span>
-										<strong className="price">From $80</strong>
-									</div>
+							<div className='feature-events-card-wrapper'>
+								<div className='feature-events-card-wrapper-inner'>
+									{events.map((event) => (
+										<div key={event.id} className="card-wrapper">
+											<figure>
+												<img src={image1} alt="Event" />
+											</figure>
+
+											<h3>{event.name}</h3>
+											<span className="location">
+												<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 64 64" enableBackground="new 0 0 64 64" xmlSpace="preserve">
+													<g>
+														<path fill="#231F20" d="M32,0C18.745,0,8,10.745,8,24c0,5.678,2.502,10.671,5.271,15l17.097,24.156C30.743,63.686,31.352,64,32,64 s1.257-0.314,1.632-0.844L50.729,39C53.375,35.438,56,29.678,56,24C56,10.745,45.255,0,32,0z M32,38c-7.732,0-14-6.268-14-14 s6.268-14,14-14s14,6.268,14,14S39.732,38,32,38z" />
+														<path fill="#231F20" d="M32,12c-6.627,0-12,5.373-12,12s5.373,12,12,12s12-5.373,12-12S38.627,12,32,12z M32,34 c-5.523,0-10-4.478-10-10s4.477-10,10-10s10,4.478,10,10S37.523,34,32,34z" />
+													</g>
+												</svg>
+												{event.location}
+											</span>
+											<strong className="price">{event.price}</strong>
+										</div>
+									))}
 								</div>
 							</div>
-							<div className=" row flex">
-								<div className="col-md-4 col-12 mb-4 hv_events">
-									<div className="slide-item">
-										<img src={image4} alt="img" />
-										<h2>Billy Joel & Stevie Nicks</h2>
-										<span className="location">
-											<img src={locationIcon} alt="#" />
-											New York, United States
-										</span>
-										<strong className="price">From $80</strong>
-									</div>
-								</div>
-								<div className="col-md-4 col-12 mb-4 hv_events">
-									<div className="slide-item">
-										<img src={image5} alt="img" />
-										<h2>Billy Joel & Stevie Nicks</h2>
-										<span className="location">
-											<img src={locationIcon} alt="#" />
-											New York, United States
-										</span>
-										<strong className="price">From $80</strong>
-									</div>
-								</div>
-								<div className="col-md-4 col-12 mb-4 hv_events">
-									<div className="slide-item">
-										<img src={image6} alt="img" />
-										<h2>Billy Joel & Stevie Nicks</h2>
-										<span className="location">
-											<img src={locationIcon} alt="#" />
-											New York, United States
-										</span>
-										<strong className="price">From $80</strong>
-									</div>
-								</div>
-							</div>
-							{/* <div className="link-holder"><Link to="#">View Events <img src={arrow} alt="->" /></Link></div> */}
 						</div>
 
 					</section>
 
-					<section className="p-5 p-md-3" style={{ background: "#EDEDED" }}>
-						<div className="container">
+					<section className="reviews-wrapper-outer" style={{ background: "#EDEDED", marginBottom: '120px' }}>
+						<div className="container reviews-wrapper">
 							<h2 className="w-100 text-center" style={{ fontSize: "60px", fontWeight: "400" }}>Excellent</h2>
 							<div className="d-flex m-auto">
 								<div className=" bg_green me-1 p-1"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16" id="IconChangeColor"> <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" id="mainIconPathAttribute" fill="#ffffff"></path> </svg></div>
@@ -307,8 +298,6 @@ const Home = () => {
 
 								<h3>Trustpilot</h3>
 							</div>
-
-
 							<Swiper
 								navigation
 								pagination={false}
@@ -442,29 +431,13 @@ const Home = () => {
 						</div>
 
 					</section>
-					<section class="news-section">
-						<div class="container">
-
-							<div class="news-area">
-								<div className="row flex">
-									<div className="col-md-6 col-12">
-										<div class="newsletter">
-											<h3>Join the <span>newsletter</span> to learn about future events</h3>
-											<p>Join the newsletter to and get 10% discount on your first ticket purchase.</p>
-											<div className="d-flex">
-												<input type="email" placeholder="Enter Email Address" />
-												<a href="#.">Subscribe</a>
-											</div>
-
-										</div>
-									</div>
-									<div className="col-md-6 col-12">
-										<div class="news-img">
-											<img src={promoImage} alt="" />
-										</div>
-									</div>
-
-								</div>
+					<section class="news-wrapper">
+						<div class="news-wrapper-inner">
+							<h2>Join the <span>newsletter</span> to learn about future events</h2>
+							<p>Join the newsletter to and get 10% discount on your first ticket purchase.</p>
+							<div className="email-wrapper">
+								<input type="email" placeholder="Enter Email Address" />
+								<a href="#.">Subscribe</a>
 							</div>
 						</div>
 					</section>
