@@ -147,13 +147,13 @@
 
                         h3 {
                             font-size: 20px;
-                            padding-bottom: 20px;
+                            padding-bottom: 8px;
                             margin: 0px;
                             text-align: center;
                         }
 
                         .location {
-                            margin-bottom: 20px;
+                            margin-bottom: 8px;
                             font-size: 18px;
                             display: flex;
                             align-items: center;
@@ -326,3 +326,10 @@
         margin-bottom: 120px;
     }
 }
+
+
+
+//For Common css
+// .MuiSelect-select {
+//     padding: 10px 15px !important;
+// }

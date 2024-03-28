@@ -5,7 +5,7 @@ import SmallBanner from "../../components/core/small-banner/Index";
 import callIcon from "../../assets/images/call.svg";
 import mailIcon from "../../assets/images/mail.svg";
 import locationIcon from "../../assets/images/foot-location.svg";
-import Slider from "../../components/slider/slider";
+import Slider from "../../components/slider/Slider";
 
 
 const RequestEvent = () => {

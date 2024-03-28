@@ -1,0 +1,56 @@
+@media screen and (min-width: 360px) {
+  .dropdown-wrapper .dropdown-btn {
+    background-color: transparent;
+    border: 0px solid #ccc;
+    padding: 15px 10px 10px 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: #fff;
+  }
+  .dropdown-wrapper .dropdown-btn span {
+    text-decoration: none;
+    display: unset;
+  }
+  .dropdown-wrapper .dropdown-btn span img {
+    text-decoration: none;
+  }
+  .dropdown-wrapper .country-flag {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+  }
+  .dropdown-wrapper .dropdown-menu-ph {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border: 0px solid #ccc;
+    border-top: none;
+    position: absolute;
+    width: auto;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1;
+    background-color: #fff;
+    border-radius: 6px;
+  }
+  .dropdown-wrapper .dropdown-menu-ph li {
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+  }
+}
+@media screen and (min-width: 767px) {
+  .dropdown-wrapper .dropdown-btn {
+    padding: 10px;
+  }
+  .dropdown-wrapper .dropdown-btn span {
+    text-decoration: none;
+  }
+  .dropdown-wrapper .dropdown-btn span img {
+    text-decoration: none;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,17 +1,33 @@
-/* MouseControlledMarquee.css */
-.marquee-container {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  cursor: pointer;
-  background-color: #0DCCD7;
-  height: 20px;
+.slider-wrapper * {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */ /* IE10+/Edge */
+  user-select: none; /* Standard */
 }
 
-.marquee-content {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  transition: transform 0.5s ease-in-out;
+.slider-wrapper {
+  background: #0DCCD7;
+  overflow: hidden;
+  cursor: grab; /* Shows a grab hand to indicate draggability */
+}
+.slider-wrapper .marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  cursor: grab;
+  animation: marquee 30s linear infinite;
+  background: #0DCCD7;
   color: #fff;
+  padding: 2px 0px;
+}
+.slider-wrapper .marquee.paused {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }/*# sourceMappingURL=slider.css.map */

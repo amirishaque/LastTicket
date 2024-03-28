@@ -2,8 +2,14 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     padding: 20px 0;
     background: #121212;
-    max-width: 1320px;
-    margin: 0 auto;
+    max-width: 100%; /* Set max-width to 100% to ensure it stretches across the viewport */
+    width: 100%; /* Set width to 100% to ensure it stretches across the viewport */
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+.header-right figure{
+    display: none;
 }
 
 #nav a {
@@ -19,7 +25,7 @@
 #nav li a {
     text-decoration: none;
     font-size: 13px;
-    padding: 10px 20px;
+    padding: 0px 20px;
     font-weight: 500;
     text-transform: uppercase;
 }
@@ -44,6 +50,26 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    justify-content: space-between;
+}
+.header-right-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.header-right-wrapper span{
+    color: #fff;
+    text-decoration: underline;
+    font-size: 13px;
+    padding: 0px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+}
+.header-right-wrapper span:hover{
+    color: #22B3C1;
+    transition: 0.4s;
+    cursor: pointer;
 }
 
 @media(max-width:999px) {
@@ -83,13 +109,16 @@
         top: 0;
         bottom: 0;
         left: 0;
-        padding: 37px 0 0;
+        padding: 15px 10px 10px;
         transition: all 0.2s ease;
         -webkit-transition: all 0.2s ease;
         -moz-transition: all 0.2s ease;
         transform: translate(-100%, 0);
         -webkit-transform: translate(-100%, 0);
         -moz-transform: translate(-100%, 0);
+    }
+    .header-right figure{
+        margin-bottom: 15px !important;
     }
 
     .header-right.active {
@@ -120,7 +149,33 @@
     }
 }
 
+@media screen and (max-width: 767px) {
+    .header-right-wrapper{
+        justify-content: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+    }
+    .header-right-wrapper span{
+        padding-top: 15px;
+        display: none;
+    }
+    .header-right {
+        margin-bottom: 15px !important;
+    }
+    .header-right figure{
+        display: block;
+    }
+    .header-right-wrapper ul{
+        margin: 0 auto;
+        /* margin-bottom: 20px; */
+        margin-top: 15px;
 
+    }
+    .header-right #nav ul{
+        gap: 15px;
+    }
+}
 
 
 

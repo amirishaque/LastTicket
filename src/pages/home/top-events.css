@@ -117,12 +117,12 @@
   }
   .feature-events-wrapper .feature-events-wrapper-inner .feature-events-card-wrapper .feature-events-card-wrapper-inner .card-wrapper h3 {
     font-size: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 8px;
     margin: 0px;
     text-align: center;
   }
   .feature-events-wrapper .feature-events-wrapper-inner .feature-events-card-wrapper .feature-events-card-wrapper-inner .card-wrapper .location {
-    margin-bottom: 20px;
+    margin-bottom: 8px;
     font-size: 18px;
     display: flex;
     align-items: center;
