@@ -38,12 +38,20 @@
 
             // justify-content: center;
             .image-box {
+                border-radius: 6px;
                 figure {
                     img {
                         width: 300px;
                         height: 255px;
+                        border: 1px solid transparent;
+                        border-radius: 15px;
+                        &:hover{
+                            border: 1px solid #0DCCD7;
+                            transition: 04s;
+                        }
                     }
                 }
+          
             }
         }
 
@@ -141,19 +149,24 @@
                                 // height: 300px;
                                 height: auto;
                                 margin-bottom: 24px;
-
+                                border: 1px solid transparent;
+                                border-radius: 15px;
+                                &:hover{
+                                    border: 1px solid #0DCCD7;
+                                    transition: 04s;
+                                }
                             }
                         }
 
                         h3 {
                             font-size: 20px;
-                            padding-bottom: 20px;
+                            padding-bottom: 8px;
                             margin: 0px;
                             text-align: center;
                         }
 
                         .location {
-                            margin-bottom: 20px;
+                            margin-bottom: 8px;
                             font-size: 18px;
                             display: flex;
                             align-items: center;
@@ -312,7 +325,7 @@
     }
 
     .feature-events-card-wrapper-inner {
-        gap: 60px !important;
+        gap: 58px !important;
     }
 
     .feature-events-wrapper {
@@ -325,4 +338,22 @@
     .news-wrapper{
         margin-bottom: 120px;
     }
+}
+
+
+
+//For Common css
+// .MuiSelect-select {
+//     padding: 10px 15px !important;
+// }
+
+.banner-wrapper-inner{
+    form{
+        position: relative;
+    }
+}
+.animation-input{
+    position: absolute;
+    top: 14px;
+    left: 20px;
 }

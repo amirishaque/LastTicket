@@ -3,7 +3,7 @@ import Header from "../../components/core/header/Header";
 import Footer from "../../components/core/footer/Footer";
 import SmallBanner from "../../components/core/small-banner/Index";
 import { Link } from "react-router-dom";
-import Slider from "../../components/slider/slider";
+import Slider from "../../components/slider/Slider";
 
 
 const SellTickets = () => {

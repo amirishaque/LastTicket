@@ -33,9 +33,18 @@
     flex-direction: column;
     gap: 20px;
   }
+  .top-events-wrapper .image-wrapper .image-box {
+    border-radius: 6px;
+  }
   .top-events-wrapper .image-wrapper .image-box figure img {
     width: 300px;
     height: 255px;
+    border: 1px solid transparent;
+    border-radius: 15px;
+  }
+  .top-events-wrapper .image-wrapper .image-box figure img:hover {
+    border: 1px solid #0DCCD7;
+    transition: 4s;
   }
   .top-events-wrapper .white-overlay {
     background-color: #121212;
@@ -114,15 +123,21 @@
     width: 100%;
     height: auto;
     margin-bottom: 24px;
+    border: 1px solid transparent;
+    border-radius: 15px;
+  }
+  .feature-events-wrapper .feature-events-wrapper-inner .feature-events-card-wrapper .feature-events-card-wrapper-inner .card-wrapper figure img:hover {
+    border: 1px solid #0DCCD7;
+    transition: 4s;
   }
   .feature-events-wrapper .feature-events-wrapper-inner .feature-events-card-wrapper .feature-events-card-wrapper-inner .card-wrapper h3 {
     font-size: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 8px;
     margin: 0px;
     text-align: center;
   }
   .feature-events-wrapper .feature-events-wrapper-inner .feature-events-card-wrapper .feature-events-card-wrapper-inner .card-wrapper .location {
-    margin-bottom: 20px;
+    margin-bottom: 8px;
     font-size: 18px;
     display: flex;
     align-items: center;
@@ -242,7 +257,7 @@
     flex-direction: row !important;
   }
   .feature-events-card-wrapper-inner {
-    gap: 60px !important;
+    gap: 58px !important;
   }
   .feature-events-wrapper {
     margin-bottom: 120px;
@@ -253,4 +268,13 @@
   .news-wrapper {
     margin-bottom: 120px;
   }
+}
+.banner-wrapper-inner form {
+  position: relative;
+}
+
+.animation-input {
+  position: absolute;
+  top: 14px;
+  left: 20px;
 }/*# sourceMappingURL=top-events.css.map */
