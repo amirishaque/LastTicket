@@ -46,7 +46,11 @@ const Slider = ({ text }) => {
           onMouseDown={handleMouseDown}
         >
           {/* {loopedText} */}
-          Your unforgettable night awaits. We've got the tickets for your next amazing experience.
+          Prepare for an unforgettable night,
+With tickets in hand, your next adventure takes flight.
+An amazing experience awaits, don't miss the sight.
+Prepare for an unforgettable night,
+With tickets in hand.
         </div>
       </div>
     </>

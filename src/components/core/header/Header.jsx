@@ -4,6 +4,7 @@ import "./header.css";
 import logo from "../../../assets/images/logo.svg";
 import { useState } from "react";
 import Dropdown from "../../home/dropdown/DropDown";
+import LogoMain from '../../../assets/images/logoMain.png';
 
 const Header = () => {
     const [isActive, setIsActive] = useState(false);
@@ -14,10 +15,10 @@ const Header = () => {
         <>
             <header id="header">
                 <div className="container v-center">
-                    <Link to="/" className="logo mb-1"><img src={logo} alt="#" /></Link>
+                    <Link to="/" className="logo mb-1"><img src={LogoMain} alt="logo" width={231} height={48} /></Link>
                     <div className={`header-right ${isActive ? 'active' : ''}`}>
                        <figure>
-                        <img src={logo} />
+                        <img src={LogoMain} alt="logo" width={231} height={48} />
                        </figure>
                         <nav id="nav">
                             
@@ -30,7 +31,7 @@ const Header = () => {
                             </ul>
                         </nav>
                         <div className="header-right-wrapper">
-                        <span> 100k+ Social Media Followers </span>
+                        <span className="review-more"> 100k+ Social Media Followers </span>
                         <Dropdown/>
                         <ul className="list-none flex ml-auto v-center">
                             <li className="login-btn"><Link className="btn-primary text-decoration-none" to="/login">Login</Link></li>

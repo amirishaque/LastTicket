@@ -56,6 +56,7 @@
     display: flex;
     align-items: center;
     gap: 50px;
+    height: 46px;
 }
 .header-right-wrapper span{
     color: #fff;
@@ -65,9 +66,14 @@
     font-weight: 600;
     text-transform: uppercase;
 
+    background: #0dccd7;
+    padding: 10px;
+    border-radius: 6px;
+    text-decoration: none;
+
 }
 .header-right-wrapper span:hover{
-    color: #22B3C1;
+    color: #fff;
     transition: 0.4s;
     cursor: pointer;
 }
@@ -155,6 +161,7 @@
         flex-direction: column;
         justify-content: center;
         gap: 15px;
+        
     }
     .header-right-wrapper span{
         padding-top: 15px;
