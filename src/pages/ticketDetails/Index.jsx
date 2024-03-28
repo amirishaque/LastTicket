@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Header from "../../components/core/header/Header";
 import Footer from "../../components/core/footer/Footer";
 import SmallBanner from "../../components/core/small-banner/Index";
-import Slider from "../../components/slider/slider";
+import MouseControlledMarquee from "../../components/slider/slider";
 
 
 const TicketDetails = () => {
@@ -16,7 +16,7 @@ const TicketDetails = () => {
             <div className="about-area">
                 <Header />
                 <main id="main">
-                    <Slider />
+                    <MouseControlledMarquee />
                     <SmallBanner
                         bannerHeading="SELL YOUR TICKETS ON LAST CHANCE TICKET"
                         bannerText="Last chance ticket helps you to sell the tickets quickly by making your listing available to millions of customers around the world."
