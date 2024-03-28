@@ -2,7 +2,7 @@ import Header from "../../components/core/header/Header";
 import Footer from "../../components/core/footer/Footer";
 import SmallBanner from "../../components/core/small-banner/Index";
 import './style/contact.css'
-import Slider from "../../components/slider/Slider";
+import Slider from "../../components/slider/slider";
 
 const Contact = () => {
     return (
