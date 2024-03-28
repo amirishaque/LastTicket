@@ -19,7 +19,7 @@ import "./banner.css";
 import "./top-events.css";
 import './home.css';
 import React, { useState, useEffect, useRef } from 'react';
-import Slider from '../../components/slider/Slider';
+import Slider from '../../components/slider/slider';
 
 import Box from '@mui/material/Box';
 import Tabs from '@mui/material/Tabs';
